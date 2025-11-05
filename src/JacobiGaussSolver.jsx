@@ -240,7 +240,7 @@ const JacobiGaussSolver = () => {
                                 <p className="text-sm text-gray-600 mt-3 italic">Uses previous iteration values</p>
                             </div>
 
-                            {results.j.iters.slice(0, 4).map((it, idx) => (
+                            {results.j.iters.map((it, idx) => (
                                 <div key={idx} className="border-l-4 border-blue-500 pl-4 bg-blue-50 p-4 rounded-r-lg mb-4">
                                     <h4 className="font-bold text-lg mb-2">Iteration #{it.iter}</h4>
                                     {it.iter === 1 && <p className="text-sm text-gray-600 mb-2">Initial: all = 0</p>}
@@ -254,7 +254,7 @@ const JacobiGaussSolver = () => {
                                     ))}
                                 </div>
                             ))}
-                            {results.j.iters.length > 4 && <p className="text-center text-gray-500 italic">... {results.j.iters.length - 4} more iterations ...</p>}
+                            {/* {results.j.iters.length > 4 && <p className="text-center text-gray-500 italic">... {results.j.iters.length - 4} more iterations ...</p>} */}
 
                             <div className="mt-6 bg-blue-100 p-4 rounded-lg">
                                 <h4 className="font-bold mb-3">Final Solution:</h4>
@@ -281,7 +281,7 @@ const JacobiGaussSolver = () => {
                                 <p className="text-sm text-gray-600 mt-3 italic">Uses updated values immediately</p>
                             </div>
 
-                            {results.gs.iters.slice(0, 4).map((it, idx) => (
+                            {results.gs.iters.map((it, idx) => (
                                 <div key={idx} className="border-l-4 border-green-500 pl-4 bg-green-50 p-4 rounded-r-lg mb-4">
                                     <h4 className="font-bold text-lg mb-2">Iteration #{it.iter}</h4>
                                     {it.iter === 1 && <p className="text-sm text-gray-600 mb-2">Initial: all = 0</p>}
@@ -295,7 +295,7 @@ const JacobiGaussSolver = () => {
                                     ))}
                                 </div>
                             ))}
-                            {results.gs.iters.length > 4 && <p className="text-center text-gray-500 italic">... {results.gs.iters.length - 4} more iterations ...</p>}
+                            {/* {results.gs.iters.length > 4 && <p className="text-center text-gray-500 italic">... {results.gs.iters.length - 4} more iterations ...</p>} */}
 
                             <div className="mt-6 bg-green-100 p-4 rounded-lg">
                                 <h4 className="font-bold mb-3">Final Solution:</h4>
